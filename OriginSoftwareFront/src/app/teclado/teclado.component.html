@@ -1,0 +1,40 @@
+<div class="row mt-3 bg-light full">
+    <!-- Calculadora -->
+    <div class="col-sm-12 mt-2 mb-2">
+        <div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend"></div>
+                <input type="text" aria-label="Text input" class="form-control" [(ngModel)]="screen" [mask]="getMask()">
+            </div>
+        </div>
+        <div class="container text-center">
+            <b>
+                <h1>
+                    <input (click)="enterValue('1')" type="button" value="1">
+                    <input (click)="enterValue('2')" type="button" value="2">
+                    <input (click)="enterValue('3')" type="button" value="3">
+                </h1>
+                <h1>
+                    <input (click)="enterValue('4')" type="button" value="4">
+                    <input (click)="enterValue('5')" type="button" value="5">
+                    <input (click)="enterValue('6')" type="button" value="6">
+                </h1>
+                <h1>
+                    <input (click)="enterValue('7')" type="button" value="7">
+                    <input (click)="enterValue('8')" type="button" value="8">
+                    <input (click)="enterValue('9')" type="button" value="9">
+                </h1>
+                <h1>
+                    <input type="button" value="0">
+                </h1>
+            </b>
+        </div>
+    </div>
+</div>
+<div class="row text-center mt-2">
+    <div class="col-12">
+        <button class="btn btn-secondary btn-lg mr-2 mb-2" style="text-align:center"  (click)="emitSubmit()">Aceptar</button>
+        <button class="btn btn-danger btn-lg mb-2" style="text-align:center" (click)="clear()">Limpiar</button>
+        <button *ngIf="showExit()" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" class="btn btn-warning btn-lg  mb-2 btnPosDivs" style="text-align:center">Salir</button>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container m-auto mt-5">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Balance tarjeta n° {{cardNumber}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Fecha de vencimiento: {{expiryDate}}</li>
+            <li class="list-group-item">Saldo: {{amount | currency}}</li>
+        </ul>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row text-center mt-2">
+        <div class="col-12">
+            <button routerLink="/operaciones" routerLinkActive="active" ariaCurrentWhenActive="page" class="btn btn-warning btn-lg  mb-2" style="text-align:center">Atras</button>
+            <button routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" class="btn btn-warning btn-lg  mb-2" style="text-align:center">Salir</button>
+        </div>
+    </div>
+</div>
